@@ -7,7 +7,7 @@ export default function App() {
       <Text className="text-3xl font-pblack">Aora</Text>
       <StatusBar style="auto" />
       <Link href="/home" style={{ color: "red" }}>
-        Go to Home
+        Go to Home to do
       </Link>
     </View>
   );
