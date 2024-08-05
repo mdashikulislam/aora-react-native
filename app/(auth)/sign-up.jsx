@@ -5,6 +5,7 @@ import { images } from "../../constants";
 import FormFeild from "../../components/FormFeild";
 import CustomButton from "../../components/CustomButton";
 import { Link } from "expo-router";
+import axios from "axios";
 const SignUp = () => {
   const [form, setForm] = useState({
     username: "",
@@ -14,7 +15,13 @@ const SignUp = () => {
 
   const [isSubmitting, setSubmitting] = useState(false);
 
-  const submit = () => {};
+  const submit = async () => {
+    const request = await axios
+      .get(`https://jsonplaceholder.typicode.com/posts`)
+      .then((res) => {
+        console.log(res.data);
+      });
+  };
   return (
     <SafeAreaView className="bg-primary h-full">
       <ScrollView style={{ height: "100%" }}>
